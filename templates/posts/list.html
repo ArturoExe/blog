@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for obj in object_list %}
+<!--Section: Author Box-->
+<section class="my-5">
+
+    <!-- Card header -->
+    <div class="card-header border-0 font-weight-bold d-flex justify-content-between">
+      <h2 class="mr-4 mb-0">{{obj.title}}</h2>
+     
+    </div>
+  
+    <div class="media mt-4 px-1">
+      <div class="media-body">
+        <h4>{{obj.author}} </h4>
+        <p>{{obj.body|truncatechars:200}}</p>
+        <a href="{% url 'post_detail' obj.id %}">Continue reading...</a>
+        
+      </div>
+      <p>{{obj.created_on}}</p>
+    </div>
+  
+  </section>
+  <!--Section: Author Box-->
+    
+    
+
+{% endfor %}
+
+{% endblock %}
