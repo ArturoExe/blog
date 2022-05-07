@@ -7,19 +7,23 @@
 <section class="my-5">
 
     <!-- Card header -->
-    <div class="card-header border-0 font-weight-bold d-flex justify-content-between">
-      <h2 class="mr-4 mb-0">{{obj.title}}</h2>
-     
-    </div>
+    
   
-    <div class="media mt-4 px-1">
-      <div class="media-body">
+    <div class="media mt-4 px-1 pd">
+      
+      <div class="card-container ">
+        <div class="card-header border-0 font-weight-bold d-flex justify-content-between">
+          <h2 >{{obj.title}}</h2>
+         
+        </div>
         <h4>{{obj.author}} </h4>
         <p>{{obj.body|truncatechars:200}}</p>
-        <a href="{% url 'post_detail' obj.id %}">Continue reading...</a>
+        <a href="{% url 'post_detail' obj.id %}" class="card-a">Continue reading...</a>
+
+        <p>{{obj.created_on}}</p>
         
       </div>
-      <p>{{obj.created_on}}</p>
+     
     </div>
   
   </section>
