@@ -1,0 +1,45 @@
+h1{
+    text-align: center;
+}
+
+.card-container{
+    margin: 2rem;
+    padding: 1rem;
+    border: 2px solid rgb(185, 141, 141);
+}
+
+.form-container{
+text-align: center;    
+}
+.title-h1{
+    text-align: center;
+    color: rgb(115, 192, 192);
+}
+
+.detail-container{
+    padding: 3rem;
+    margin: 3rem;
+    text-align: justify;
+    border:2px solid rgb(92, 91, 91);
+}
+
+.detail-header{
+text-align: center;
+
+}
+
+.detail-controls{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.detail-controls .delete{
+    color: rgb(211, 100, 100);
+    
+}
+
+a{
+    text-decoration: none;
+}
