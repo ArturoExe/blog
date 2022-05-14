@@ -4,30 +4,30 @@
 
 {% for obj in object_list %}
 <!--Section: Author Box-->
-<section class="my-5">
 
-    <!-- Card header -->
-    
-  
-    <div class="media mt-4 px-1 pd">
-      
-      <div class="card-container ">
-        <div class="card-header border-0 font-weight-bold d-flex justify-content-between">
-          <h2 >{{obj.title}}</h2>
-         
+  <!-- Main Content-->
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="{% url 'post_detail' obj.id %}">
+                    <h2 class="post-title">{{obj.title}}</h2>
+                    <h3 class="post-subtitle">{{obj.body|truncatechars:200}}</h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <span>{{obj.author}}</span>
+                    on <span>{{obj.created_on}}</span>
+                </p>
+            </div>
+
+            <!-- Divider-->
+            <hr class="my-4" />
         </div>
-        <h4>{{obj.author}} </h4>
-        <p>{{obj.body|truncatechars:200}}</p>
-        <a href="{% url 'post_detail' obj.id %}" class="card-a">Continue reading...</a>
-
-        <p>{{obj.created_on}}</p>
-        
-      </div>
-     
     </div>
-  
-  </section>
-  <!--Section: Author Box-->
+</div>
+
     
     
 
